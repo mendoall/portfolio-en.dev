@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import UserCode from "../components/icons/UserCode.astro";
+import User from "../components/icons/User.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Technologies from "../components/Technologies.astro";
+import Intro from "../components/Intro.astro";
+---
+
+<Layout
+  title="Allan Mendoza Dev | Full-Stack Junior, HTML5, CSS, REACT, TAILWIND, C#, SQL"
+  description="Estudiante graduado de bachillerato en ingeniería informática en busca de una oportunidad como Desarrollador Junior o un puesto correspondiente. Fuertes habilidades de comunicación verbal y escrita."
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
+      <Intro />
+    </SectionContainer>
+
+    <SectionContainer id="experience">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size 7" />
+        Work Experience
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-4 flex gap-x-3 items-center">
+        <CodeIcon class="size 7" />
+        Projects
+      </h2>
+      <Projects />
+    </SectionContainer>
+    <SectionContainer id="about-me">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <User class="size 7" />
+        About me
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+    <SectionContainer id="technologies">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <UserCode class="size 7" />
+        Technologies
+      </h2>
+      <Technologies />
+    </SectionContainer>
+  </main>
+</Layout>

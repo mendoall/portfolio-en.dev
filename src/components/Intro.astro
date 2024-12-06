@@ -1,0 +1,61 @@
+---
+import Badge from "./Badge.astro";
+import SocialPill from "./SocialPill.astro";
+import LinkedInIcon from "./icons/LinkedIn.astro";
+import GitHubIcon from "./icons/GitHub.astro";
+import MailIcon from "./icons/Mail.astro";
+import DownloadIcon from "./icons/Download.astro";
+---
+
+<img
+  class="rounded-full size-12 mb-5"
+  src="/amendoza.webp"
+  alt="alldev photo"
+/>
+<h1
+  class="text-white text:3xl md:text-3xl lg:text-4xl -mb-6 font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+>
+  Hello, I'm Allan Mendoza <a
+    href="https://www.linkedin.com/in/mendoall/"
+    target="_blank"
+    rel="noopener"
+    ><div class="flex justify-center items-center py-2">
+      <Badge class="">Available to work</Badge>
+    </div>
+  </a>
+  <h2
+    class="text-lg md:text-xl lg:-mt-10 mb-20 font-bold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.100),theme(colors.sky.400),theme(colors.fuchsia.400),theme(colors.sky.400),theme(colors.indigo.100),theme(colors.indigo.400))] animate-gradient"
+    style="background-size: 200% 200%;"
+  >
+    Junior Full-Stack Developer
+  </h2>
+</h1>
+
+<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+  <span>+1 year of experience.</span><span class="text-yellow-200/90">
+    Computer Engineer and Web Developer.</span
+  ><span class="text-blue-300">
+    From Santiago de Puriscal, San José, Costa Rica.</span
+  >
+  <span class="opacity-65"
+    >Developing innovative web solutions and responsive designs.</span
+  >
+</h2>
+<nav class="flex gap-4 mt-8 flex-wrap">
+  <SocialPill href="https://www.linkedin.com/in/mendoall/">
+    <LinkedInIcon class="size-4 lg:size-6" />
+    LinkedIn
+  </SocialPill>
+  <SocialPill href="https://github.com/mendoall">
+    <GitHubIcon class="size-4 lg:size-6" />
+    GitHub
+  </SocialPill>
+  <SocialPill href="mailto:ajmdza21@gmail.com">
+    <MailIcon class="size-4 lg:size-6" />
+    E-Mail
+  </SocialPill>
+  <SocialPill href="/resume.pdf" download="resume.pdf">
+    <DownloadIcon class="size-6 lg:size-6" />
+    Download Resume
+  </SocialPill>
+</nav>

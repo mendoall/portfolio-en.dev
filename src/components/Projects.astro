@@ -1,0 +1,202 @@
+---
+import ReactIcon from "./icons/React.astro";
+import TailwindIcon from "./icons/Tailwind.astro";
+import GitHubIcon from "./icons/GitHub.astro";
+import CSharpIcon from "./icons/CSharp.astro";
+import JsonIcon from "./icons/JSON.astro";
+import HTML5Icon from "./icons/HTML5.astro";
+import CSSIcon from "./icons/CSS.astro";
+import ReactRouterIcon from "./icons/ReactRouter.astro";
+import MySQLIcon from "./icons/MySQL.astro";
+import JWTIcon from "./icons/JWT.astro";
+import SwaggerIcon from "./icons/Swagger.astro";
+import MongoDBicon from "./icons/MongoDB.astro";
+import PHPicon from "./icons/PHP.astro";
+
+const TAGS = {
+  REACT: {
+    name: "React.js",
+    class: "bg-black text-white",
+    icon: ReactIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: TailwindIcon,
+  },
+  CSHARP: {
+    name: "C#",
+    class: "bg-black text-white",
+    icon: CSharpIcon,
+  },
+  JSON: {
+    name: "JSON",
+    class: "bg-[#003159] text-white",
+    icon: JsonIcon,
+  },
+  HTML5: {
+    name: "HTML5",
+    class: "bg-black text-white",
+    icon: HTML5Icon,
+  },
+  CSS: {
+    name: "CSS3",
+    class: "bg-[#003159] text-white",
+    icon: CSSIcon,
+  },
+  REACTROUTER: {
+    name: "React-Router",
+    class: "bg-black text-white",
+    icon: ReactRouterIcon,
+  },
+  MySQL: {
+    name: "MySQL",
+    class: "bg-[#003159] text-white",
+    icon: MySQLIcon,
+  },
+  JWT: {
+    name: "JWT",
+    class: "bg-black text-white",
+    icon: JWTIcon,
+  },
+  SWAGGER: {
+    name: "Swagger",
+    class: "bg-[#003159] text-white",
+    icon: SwaggerIcon,
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-[#003159] text-white",
+    icon: MongoDBicon,
+  },
+  PHP: {
+    name: "PHP",
+    class: "bg-black text-white",
+    icon: PHPicon,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Mundo Gluck - Pausas Activas",
+    description:
+      "Activity management application for the company Mundo Gluck that allows users to manage, edit, delete and view activities linked to modules and users. It includes functionalities for uploading and downloading files, as well as links to external activities. The backend is developed in C# with Entity Framework Core, while the frontend is developed with a modern and responsive interface. In addition, it has authentication and authorization, adapting to user roles for the dynamic management of activities and modules.",
+    link: "https://github.com/mendoall/PausasActivas",
+    github: "https://github.com/mendoall/PausasActivas",
+    image: "/projects/pausas-activas.webp",
+    tags: [
+      TAGS.CSHARP,
+      TAGS.MySQL,
+      TAGS.REACTROUTER,
+      TAGS.REACT,
+      TAGS.TAILWIND,
+      TAGS.JWT,
+      TAGS.SWAGGER,
+    ],
+  },
+  {
+    title: "Condominium Project",
+    description:
+      "Application developed in C# MVC for the comprehensive management of condominiums. It facilitates the administration of housing projects, condominium owners, visitors, and security officers. Condominium owners can register visitors, manage vehicles, and generate an EasyPass QR for quick access. Security officers verify records in real time, ensuring efficient and secure control at entrances. Ideal for optimizing processes in modern residential projects.",
+    link: "https://github.com/mendoall/ProyectoCondominiosAM",
+    github: "https://github.com/mendoall/ProyectoCondominiosAM",
+    image: "/projects/condominios.webp",
+    tags: [TAGS.CSHARP],
+  },
+  {
+    title: "Poke - API",
+    description:
+      "ASP.NET Core MVC interface that consumes data from the PokéAPI to get detailed information about the first 151 Pokémon. When the main page loads, it makes an initial request to get a list of Pokémon, followed by individual requests to get specific details about each one. The information for each Pokémon is processed and displayed in the view, allowing users to see a complete listing with relevant details such as the name and ID of each Pokémon.",
+    link: "https://github.com/mendoall/PokeApi",
+    github: "https://github.com/mendoall/PokeApi",
+    image: "/projects/pokeapi3.webp",
+    tags: [TAGS.CSHARP, TAGS.JSON],
+  },
+  {
+    title: "Mongo Back-End",
+    description:
+      "Web application developed with ASP.NET Core and MongoDB as a NoSQL database. It uses the MVC pattern for management, allowing operations to create, read, update and delete users. Data is stored in MongoDB and managed through the Database class, which handles the connection and CRUD operations. The application provides a simple interface to manage users and their data.",
+    link: "https://github.com/mendoall/MongoCRUD",
+    github: "https://github.com/mendoall/MongoCRUD",
+    image: "/projects/mongobe.webp",
+    tags: [TAGS.CSHARP, TAGS.MONGODB],
+  },
+  {
+    title: "Freelance - Web Site",
+    description:
+      "Static website for a freelance designer, showcasing his services in web design, web applications, and e-commerce. It includes welcome sections, services, and a contact form. Developed in HTML5 and CSS3, it uses Google Fonts and SVGs for an attractive and responsive visual design.",
+    link: "https://github.com/mendoall/FreelancerFrontEnd",
+    github: "https://github.com/mendoall/FreelancerFrontEnd",
+    image: "/projects/freelancer.webp",
+    tags: [TAGS.HTML5, TAGS.CSS],
+  },
+  {
+    title: "Glam MakeUp-Estética",
+    description:
+      "Static website that promotes beauty services and products, allows appointment scheduling and connects to social networks. Developed with HTML for the structure, CSS for the visual design, and PHP for the management of the appointment form, the page uses multimedia resources to enrich the user experience.",
+    link: "https://github.com/mendoall/GlamFrontEnd",
+    github: "https://github.com/mendoall/GlamFrontEnd",
+    image: "/projects/glam.webp",
+    tags: [TAGS.HTML5, TAGS.CSS, TAGS.PHP],
+  },
+];
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+  {
+    PROJECTS.map(({ image, title, description, tags, link }) => (
+      <div class="max-w-sm bg-white/80 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-1">
+        <img
+          class="rounded-t-lg overflow-hidden bg-white bg-fixed transition duration-300 ease-in-out hover:opacity-80"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${title}`}
+        />
+        <div class="p-5">
+          <div>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              {title}
+            </h5>
+          </div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-sm">
+            {description}
+          </p>
+          <ul class="flex gap-x-2 gap-y-2 flex-wrap mb-4">
+            {tags.map((tag) => (
+              <li>
+                <span
+                  class={`flex items-center gap-1 rounded-full text-sm ${tag.class} py-1 px-2`}
+                >
+                  <tag.icon class="w-4 h-4" />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <a
+            href={link}
+            target="_blank"
+            class="rounded-full border border-white/40 flex justify-center items-center gap-x-2 py-1 px-2 lg:py-2 lg:px-2 text-xs lg:text-sm bg-[#131622] hover:scale-110 hover:bg-[#020617] transition"
+          >
+            <GitHubIcon class="size-4 lg:size-6" />
+            Go to Project
+            <svg
+              class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 5h12m0 0L9 1m4 4L9 9"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    ))
+  }
+</div>
